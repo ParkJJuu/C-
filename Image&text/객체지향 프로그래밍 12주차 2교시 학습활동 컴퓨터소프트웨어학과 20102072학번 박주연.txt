@@ -1,0 +1,25 @@
+1. 다음 클래스에서 컴파일러가 삽입하는 디폴트 복사 생성자는 무엇인가?
+calss Student {
+	string name;
+	string id;
+	double grade;
+};
+
+Student::Student(const Student& s) {  // 컴파일러가 삽입하는 디폴트 복사 생성자
+	this->name = s.name;
+	this->id = s.id;
+	this->grade = s.grade;
+}
+
+2. 다음 클래스에서 컴파일러가 삽입하는 디폴트 복사 생성자는 무엇인가?
+class Student {
+	string *pName;
+	string *pId;
+	double grade;
+};
+
+Student::Student(Student& s) {   // 컴파일러가 삽입하는 디폴트 복사 생성자
+		this->pName = s.pName;
+		this->pId = s.pId;
+		this->grade = s.grade;
+	}
